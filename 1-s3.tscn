@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cof6jwc0bni2v"]
+[gd_scene load_steps=3 format=3 uid="uid://bqkh4wbqm2mp5"]
 
-[ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_p6uqo"]
-[ext_resource type="TileSet" uid="uid://di4mravqo3nyo" path="res://basic_tm.tres" id="2_3x10n"]
+[ext_resource type="Texture2D" path="res://blue_back.tres" id="1_p6uqo"]
+[ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_3x10n"]
 
 [node name="Node2D" type="Node2D"]
 

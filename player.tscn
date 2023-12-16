@@ -8,7 +8,8 @@ size = Vector2(128, 128)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(32, 32)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
+collision_layer = 2
 script = ExtResource("1_jghsq")
 metadata/_edit_group_ = true
 
