@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cqqnetsb8rc7h"]
+
+[node name="Mob" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
