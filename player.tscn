@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2kwre"]
 size = Vector2(128, 128)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(32, 32)
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_jghsq")
 metadata/_edit_group_ = true
 
@@ -15,5 +17,3 @@ texture = ExtResource("1_0dosj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2kwre")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
