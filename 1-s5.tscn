@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1xc05jcoex3e"]
+[gd_scene load_steps=5 format=3 uid="uid://1xc05jcoex3e"]
 
 [ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://Retro Platformer Cave Background.png" id="1_pmxq0"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_l122a"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_pn70a"]
+[ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_p5t1y"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,3 +27,8 @@ layer_3/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("3_pn70a")]
 position = Vector2(677, 224)
+
+[node name="ExitPoint" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_p5t1y")]
+position = Vector2(0, 96)
+scale = Vector2(1, 31.36)
+player = NodePath("../Player")

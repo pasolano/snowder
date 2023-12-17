@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dech47k21qqdb"]
+[gd_scene load_steps=5 format=3 uid="uid://dech47k21qqdb"]
 
 [ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_dxdpu"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_ra2hh"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_j4ycc"]
+[ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_my6mb"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,3 +29,8 @@ layer_3/name = "foreground"
 layer_3/tile_data = PackedInt32Array()
 
 [node name="Player" parent="." instance=ExtResource("3_j4ycc")]
+
+[node name="ExitPoint" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_my6mb")]
+position = Vector2(719, -28)
+scale = Vector2(1, 42.28)
+player = NodePath("../Player")
