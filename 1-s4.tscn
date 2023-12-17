@@ -27,3 +27,5 @@ layer_3/tile_data = PackedInt32Array(40, 1769472, 15, 65576, 1769472, 15, 131112
 
 [node name="Player" parent="." instance=ExtResource("3_rc8qs")]
 position = Vector2(649, 160)
+jump_speed = -800.0
+gravity = 2000.0
