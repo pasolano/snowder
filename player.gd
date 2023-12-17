@@ -26,11 +26,11 @@ func _physics_process(delta):
 		if motion_mode == MOTION_MODE_GROUNDED:
 			var direction = Vector2.ZERO
 			if Input.is_action_pressed("move_right"):
-				velocity.x += speed * delta
+				velocity.x = speed
 			else:
 				velocity.x = clampf(velocity.x, -INF, 0)
 			if Input.is_action_pressed("move_left"):
-				velocity.x -= speed	* delta
+				velocity.x = -speed
 			else:
 				velocity.x = clampf(velocity.x, 0, INF)
 			if Input.is_action_pressed("move_up") and is_on_floor():
@@ -51,7 +51,9 @@ func _physics_process(delta):
 				direction.y -= 1
 				
 			if direction.length() > 0:
-				velocity += direction.normalized() * speed * delta
+				velocity = direction.normalized() * speed
+			else:
+				velocity = Vector2.ZERO
 				
 		move_and_slide()
 
@@ -94,5 +96,5 @@ func _process(_delta):
 			_animated_sprite.flip_h = false
 			if velocity.x < 0:
 				_animated_sprite.flip_h = true
-	if velocity == Vector2.ZERO:
+	if velocity == Vector2.ZERO and motion_mode == MOTION_MODE_GROUNDED:
 		_animated_sprite.play('idle')
