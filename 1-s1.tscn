@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bea8r5d7n7ljg"]
+[gd_scene load_steps=6 format=3 uid="uid://bea8r5d7n7ljg"]
 
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="1_27nu5"]
 [ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="2_qkqq6"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_c5t3p"]
 [ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://spawn_point.tscn" id="4_0yx1o"]
+[ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="5_7v6ev"]
 
 [node name="L1S1" type="Node2D"]
 
@@ -32,3 +33,8 @@ texture = ExtResource("2_qkqq6")
 position = Vector2(11, 363)
 spawnee = NodePath("../Player")
 walk_to = Vector2(100, 0)
+
+[node name="ExitPoint" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_7v6ev")]
+position = Vector2(719, -1)
+scale = Vector2(1, 6.92)
+player = NodePath("../Player")

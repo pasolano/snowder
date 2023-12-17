@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://com7w4ehh8rm8"]
+[gd_scene load_steps=4 format=3 uid="uid://1xc05jcoex3e"]
 
 [ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://Retro Platformer Cave Background.png" id="1_pmxq0"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_l122a"]
