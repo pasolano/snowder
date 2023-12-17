@@ -2,8 +2,6 @@ extends Node
 
 var target_scene_path = "res://1-s1.tscn"
 
-
-
 var loading_status : int
 var progress : Array[float]
 
