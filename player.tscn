@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://player.gd" id="1_jghsq"]
 [ext_resource type="SpriteFrames" uid="uid://o63svcauwfg6" path="res://grounded_sprites.tres" id="3_gac37"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kwre"]
-size = Vector2(128, 128)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_otasl"]
+radius = 38.71
+height = 116.13
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(32, 32)
@@ -14,10 +15,11 @@ script = ExtResource("1_jghsq")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_2kwre")
+shape = SubResource("CapsuleShape2D_otasl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.38419e-07, 0)
+position = Vector2(-3.00407e-05, 0)
 scale = Vector2(0.307692, 0.281938)
 sprite_frames = ExtResource("3_gac37")
-animation = &"idle"
+animation = &"run"
+frame_progress = 0.907394
