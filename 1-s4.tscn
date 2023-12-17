@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_h4yvj"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_rc8qs"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 718.0
