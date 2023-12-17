@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcs6w651e7bmh"]
+[gd_scene load_steps=5 format=3 uid="uid://dcs6w651e7bmh"]
 
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="1_km0bo"]
 [ext_resource type="Script" path="res://main.gd" id="1_mc4xf"]
-[ext_resource type="SpriteFrames" uid="uid://o63svcauwfg6" path="res://grounded_sprites.tres" id="3_h3e03"]
 [ext_resource type="Texture2D" uid="uid://b0o3yg14gsnry" path="res://icon.svg" id="3_py6ua"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvvqe"]
@@ -12,12 +11,6 @@ size = Vector2(121.429, 114.286)
 script = ExtResource("1_mc4xf")
 
 [node name="Player" parent="." instance=ExtResource("1_km0bo")]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(2.38419e-07, 0)
-scale = Vector2(0.307692, 0.281938)
-sprite_frames = ExtResource("3_h3e03")
-animation = &"idle"
 
 [node name="StartPosition" type="Marker2D" parent="."]
 position = Vector2(360, 240)
