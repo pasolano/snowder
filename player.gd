@@ -27,12 +27,10 @@ func _physics_process(delta):
 			var direction = Vector2.ZERO
 			if Input.is_action_pressed("move_right"):
 				velocity.x = speed
-			else:
-				velocity.x = clampf(velocity.x, -INF, 0)
 			if Input.is_action_pressed("move_left"):
 				velocity.x = -speed
-			else:
-				velocity.x = clampf(velocity.x, 0, INF)
+			if not Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+				velocity.x = 0
 			if Input.is_action_pressed("move_up") and is_on_floor():
 				velocity.y = jump_speed
 			
@@ -56,12 +54,6 @@ func _physics_process(delta):
 				velocity = Vector2.ZERO
 				
 		move_and_slide()
-
-func _on_body_entered(body):
-	hide() # Player disappears after being hit.
-	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
 
 func start(pos):
 	position = pos

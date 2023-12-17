@@ -22,4 +22,4 @@ position = Vector2(-3.00407e-05, 0)
 scale = Vector2(0.307692, 0.281938)
 sprite_frames = ExtResource("3_gac37")
 animation = &"run"
-frame_progress = 0.0480022
+frame_progress = 0.70422
