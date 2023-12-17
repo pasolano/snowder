@@ -1,12 +1,14 @@
 extends Node
 
-var target_scene_path = []
+var target_scene_path = "res://1-s1.tscn"
+
+
 
 var loading_status : int
 var progress : Array[float]
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready():	
 	# Request to load the target scene:
 	ResourceLoader.load_threaded_request(target_scene_path)
 
