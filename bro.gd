@@ -17,4 +17,12 @@ func _physics_process(delta):
 		_bro.play('side')
 	else:
 		_follow.set_progress_ratio(1)
-	print(_follow.get_progress())
+	
+
+func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	#check if dialogue is already happening
+	if Dialogic.current_timeline != null:
+		return
+	#initiate dialogue
+	else:
+		Dialogic.start('first_tl') 

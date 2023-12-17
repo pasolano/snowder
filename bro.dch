@@ -26,6 +26,9 @@
 "offset": Vector2(0, 0),
 "portraits": {
 "Boy": {
+"export_overrides": {
+"image": "\"\""
+},
 "image": "res://PortraitsFinal/Boy.png",
 "mirror": false,
 "offset": Vector2(0, 0),
