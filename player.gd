@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal hit
 
 @export var speed = 300.0
-@export var jump_speed = -400.0
-@export var gravity = 600.0
+@export var jump_speed = -750.0
+@export var gravity = 2000.0
 var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
@@ -24,15 +24,12 @@ func _physics_process(delta):
 		
 	else:
 		if motion_mode == MOTION_MODE_GROUNDED:
-			var direction = Vector2.ZERO
 			if Input.is_action_pressed("move_right"):
-				velocity.x += speed * delta
-			else:
-				velocity.x = clampf(velocity.x, -INF, 0)
+				velocity.x = speed
 			if Input.is_action_pressed("move_left"):
-				velocity.x -= speed	* delta
-			else:
-				velocity.x = clampf(velocity.x, 0, INF)
+				velocity.x = -speed
+			if not Input.is_action_pressed("move_right") and not Input.is_action_pressed("move_left"):
+				velocity.x = 0
 			if Input.is_action_pressed("move_up") and is_on_floor():
 				velocity.y = jump_speed
 			
@@ -51,15 +48,11 @@ func _physics_process(delta):
 				direction.y -= 1
 				
 			if direction.length() > 0:
-				velocity += direction.normalized() * speed * delta
+				velocity = direction.normalized() * speed
+			else:
+				velocity = Vector2.ZERO
 				
 		move_and_slide()
-
-func _on_body_entered(body):
-	hide() # Player disappears after being hit.
-	hit.emit()
-	# Must be deferred as we can't change physics properties on a physics callback.
-	$CollisionShape2D.set_deferred("disabled", true)
 
 func start(pos):
 	position = pos
@@ -94,5 +87,5 @@ func _process(_delta):
 			_animated_sprite.flip_h = false
 			if velocity.x < 0:
 				_animated_sprite.flip_h = true
-	if velocity == Vector2.ZERO:
+	if velocity == Vector2.ZERO and motion_mode == MOTION_MODE_GROUNDED:
 		_animated_sprite.play('idle')
