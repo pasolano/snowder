@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Snowder"
-run/main_scene="res://1-s1.tscn"
+run/main_scene="res://main_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

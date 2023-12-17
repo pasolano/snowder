@@ -9,5 +9,5 @@ func _ready():
 
 func _on_body_entered(body):
 	if body == player:
-		emit_signal("end_reached")
+		end_reached.emit()
 		print('hit')
