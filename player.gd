@@ -90,3 +90,38 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+	
+#hi pabooo is me kai imma mess around with animating; also no idea how to get rid of the original sprite
+#with the godot face *shrug*
+
+@onready var _animated_sprite = $AnimatedSprite2D
+
+
+func _process(_delta):
+	if Input.is_action_pressed("move_right"):
+		if motion_mode == MOTION_MODE_FLOATING:
+			_animated_sprite.play('floating_side')
+			_animated_sprite.flip_h=false
+		elif is_on_floor():
+			_animated_sprite.play('run')
+			_animated_sprite.flip_h=false
+	if Input.is_action_pressed("move_left"):
+		if motion_mode == MOTION_MODE_FLOATING:
+			_animated_sprite.play('floating_side')
+			_animated_sprite.flip_h=true
+		elif is_on_floor():
+			_animated_sprite.play('run')
+			_animated_sprite.flip_h=true
+	if Input.is_action_pressed("move_down"):
+		if motion_mode == MOTION_MODE_FLOATING:
+			_animated_sprite.play('floating_down')
+	if Input.is_action_pressed("move_up"):
+		if motion_mode == MOTION_MODE_FLOATING:
+			_animated_sprite.play('floating_up')
+		else:
+			_animated_sprite.play('jump')
+			_animated_sprite.flip_h=false
+			if velocity.x < 0:
+				_animated_sprite.flip_h=true
+	if velocity.x == 0 and velocity.y == 0:
+		_animated_sprite.play('idle')
