@@ -4,7 +4,21 @@ bro: All, like, on the walls and stuff.
 bro: Almost mistook you for a [pause=0.5](shudders) [pause=0.5]spooky snow spider.
 bro: Don't get me wrong though, you do you.
 bro: Just thought it might be easier if you walked on the ground.
-- I *am* on the ground.
-	jump 
+- I *am* on the ground!
+	jump on_ground
 - AHH! SPOOKY SNOW SPIDER!
-	jump 
+	jump snow_spider
+label on_ground
+bro: Oh, buddy.
+bro: You don't have to be shy about your wall-walking ways.
+bro: You'll receive no judgment from me, friend.
+bro: You have your walls, I have my ground. To each their own.
+- You're the one walking on the walls!
+	jump wall_walker/
+label snow_spider
+bro: [speed=2]AHHH WHERE IS IT WHERE IS IT WHERE IS IT
+bro: Hey, wait a second. [pause=1]I don't see any spooker snow spiders here, bud.
+bro: That's not a very nice prank.
+bro: What'd you go and do that for?
+- HOW ARE YOU WALKING ON THE WALLS??
+	jump wall_walker/

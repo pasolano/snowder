@@ -22,7 +22,9 @@ Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
 [dialogic]
 
 glossary/default_case_sensitive=true
-variables={}
+variables={
+"": ""
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -39,6 +41,17 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+layout/styles={
+"Default": {
+"export_overrides": {
+"choices_text_color": "Color(0.0980392, 0.552941, 0.0313726, 1)",
+"choices_text_color_focus": "Color(0.12549, 1, 0, 1)",
+"choices_text_color_hover": "Color(0, 0.976471, 1, 1)"
+},
+"layout": "res://addons/dialogic/Modules/DefaultLayouts/TextBubble/DialogicTextBubbleLayout.tscn"
+}
+}
+layout/default_style="Default"
 
 [display]
 
