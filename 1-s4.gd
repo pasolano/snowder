@@ -1,5 +1,5 @@
 extends Node2D
-var _layout = Dialogic.start("res://first_tl.dtl")
+#var _layout = Dialogic.start("res://first_tl.dtl")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
