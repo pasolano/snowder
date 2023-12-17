@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://1xc05jcoex3e"]
+[gd_scene load_steps=6 format=3 uid="uid://1xc05jcoex3e"]
 
 [ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://Retro Platformer Cave Background.png" id="1_pmxq0"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_l122a"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_pn70a"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_p5t1y"]
+[ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://spawn_point.tscn" id="5_luesg"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -32,3 +33,7 @@ position = Vector2(677, 224)
 position = Vector2(0, 96)
 scale = Vector2(1, 31.36)
 player = NodePath("../Player")
+
+[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_luesg")]
+position = Vector2(702, 223)
+spawnee = NodePath("../Player")

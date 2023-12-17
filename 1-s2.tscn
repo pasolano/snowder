@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dech47k21qqdb"]
+[gd_scene load_steps=6 format=3 uid="uid://dech47k21qqdb"]
 
 [ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_dxdpu"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_ra2hh"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_j4ycc"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_my6mb"]
+[ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://spawn_point.tscn" id="5_5y1c6"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -34,3 +35,7 @@ layer_3/tile_data = PackedInt32Array()
 position = Vector2(719, -28)
 scale = Vector2(1, 42.28)
 player = NodePath("../Player")
+
+[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_5y1c6")]
+position = Vector2(11, 33)
+spawnee = NodePath("../Player")

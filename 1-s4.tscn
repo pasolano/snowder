@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d4ni6yeqwoeec"]
+[gd_scene load_steps=6 format=3 uid="uid://d4ni6yeqwoeec"]
 
 [ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_pa0nk"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_h4yvj"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_rc8qs"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_btg1h"]
+[ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://spawn_point.tscn" id="5_n38sj"]
 
 [node name="Node2D2" type="Node2D"]
 
@@ -34,3 +35,7 @@ jump_speed = -800.0
 position = Vector2(0, 31)
 scale = Vector2(1, 20.96)
 player = NodePath("../Player")
+
+[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_n38sj")]
+position = Vector2(649, 161)
+spawnee = NodePath("../Player")
