@@ -3,8 +3,8 @@ extends CharacterBody2D
 signal hit
 
 @export var speed = 300.0
-@export var jump_speed = -400.0
-@export var gravity = 600.0
+@export var jump_speed = -750.0
+@export var gravity = 2000.0
 var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
@@ -24,7 +24,6 @@ func _physics_process(delta):
 		
 	else:
 		if motion_mode == MOTION_MODE_GROUNDED:
-			var direction = Vector2.ZERO
 			if Input.is_action_pressed("move_right"):
 				velocity.x = speed
 			if Input.is_action_pressed("move_left"):
