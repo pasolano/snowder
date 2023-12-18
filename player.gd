@@ -14,6 +14,7 @@ var controllable = true # Whether player has control of the character or not.
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	Dialogic.signal_event.connect(_on_cutscene) #makes Player listen for Dialogic signals
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -111,5 +112,9 @@ func _on_animated_sprite_2d_animation_finished():
 #arrest control during dialogue (game crashes if player dies while dialogue is running)
 #although could also be fixed by reseting player position rather than reloading scene?
 #which might be better cuz I want to track player deaths as a variable maybe
-
+func _on_cutscene(argument:String):
+	if argument == "no_control":
+		controllable = false
+	if argument == "yes_control":
+		controllable = true
 
