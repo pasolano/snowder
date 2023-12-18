@@ -10,13 +10,16 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var _follow :PathFollow2D = get_parent()
 @onready var _bro = $AnimatedSprite2D
 var _speed :float = 120.0
+var _end_rat = 0.99 #tbh this is just a stupid stopgap because the pathing function wasn't working
 
 func _physics_process(delta):
-	if _follow.get_progress_ratio() != 1:
+	if _follow.get_progress_ratio() < _end_rat:
 		_follow.set_progress(_follow.get_progress() + _speed * delta)
 		_bro.play('side')
 	else:
-		_follow.set_progress_ratio(1)
+		_follow.set_progress_ratio(_end_rat)
+		_bro.play('idle_side')
+	print(_follow.get_progress_ratio())
 	
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
@@ -25,4 +28,6 @@ func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shap
 		return
 	#initiate dialogue
 	else:
-		Dialogic.start('first_tl') 
+		Dialogic.start('first_tl')
+		var layout = Dialogic.start("first_tl")
+		layout.register_character(load("res://bro.dch"), $".")
