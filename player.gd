@@ -116,6 +116,7 @@ func _on_cutscene(argument:String):
 	if argument == "no_control":
 		velocity.y = 0
 		velocity.x = 0
+		_animated_sprite.pause()
 		controllable = false
 	if argument == "yes_control":
 		controllable = true
