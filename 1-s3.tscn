@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqkh4wbqm2mp5"]
+[gd_scene load_steps=7 format=3 uid="uid://bqkh4wbqm2mp5"]
 
 [ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_p6uqo"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_3x10n"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_y6dg5"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://exit_point.tscn" id="4_c8b0a"]
 [ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://spawn_point.tscn" id="5_seuna"]
+[ext_resource type="PackedScene" uid="uid://c2sf8dhh6ud4g" path="res://fall_gap.tscn" id="6_toh7t"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -38,3 +39,7 @@ player = NodePath("../Player")
 [node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_seuna")]
 position = Vector2(17, 369)
 spawnee = NodePath("../Player")
+
+[node name="Fall_gap" parent="." instance=ExtResource("6_toh7t")]
+
+[connection signal="body_shape_entered" from="Fall_gap" to="Player" method="_on_fall_gap_body_shape_entered"]

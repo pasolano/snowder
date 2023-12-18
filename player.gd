@@ -114,6 +114,8 @@ func _on_animated_sprite_2d_animation_finished():
 #which might be better cuz I want to track player deaths as a variable maybe
 func _on_cutscene(argument:String):
 	if argument == "no_control":
+		velocity.y = 0
+		velocity.x = 0
 		controllable = false
 	if argument == "yes_control":
 		controllable = true
