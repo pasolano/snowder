@@ -6,6 +6,10 @@ signal hit
 @export var jump_speed = -750.0
 @export var gravity = 2000.0
 var screen_size # Size of the game window.
+var controllable = true # Whether player has control of the character or not.
+						# Useful for taking away control to let animation play out or for cutscenes.
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +17,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if controllable == false:
+		return
 	if Input.is_action_just_pressed("change_perspective"):
 		if motion_mode == MOTION_MODE_FLOATING:
 			motion_mode = MOTION_MODE_GROUNDED
@@ -62,6 +68,8 @@ func start(pos):
 @onready var _animated_sprite = $AnimatedSprite2D
 
 func _process(_delta):
+	if controllable == false:
+		return
 	if Input.is_action_pressed("move_right"):
 		if motion_mode == MOTION_MODE_FLOATING:
 			_animated_sprite.play('floating_side')
@@ -89,3 +97,19 @@ func _process(_delta):
 				_animated_sprite.flip_h = true
 	if velocity == Vector2.ZERO and motion_mode == MOTION_MODE_GROUNDED:
 		_animated_sprite.play('idle')
+
+#placeholder for death by falling/spikes
+func _on_fall_gap_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	controllable = false
+	velocity.y = 0
+	velocity.x = 0
+	_animated_sprite.play('dead')
+
+func _on_animated_sprite_2d_animation_finished():
+	get_tree().reload_current_scene()
+
+#arrest control during dialogue (game crashes if player dies while dialogue is running)
+#although could also be fixed by reseting player position rather than reloading scene?
+#which might be better cuz I want to track player deaths as a variable maybe
+
+
