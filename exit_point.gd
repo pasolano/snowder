@@ -1,13 +1,44 @@
 extends Area2D
 
-signal end_reached
+const FILE_FORMAT = "res://{level}-s{screen}.tscn"
 
-@export var player: CharacterBody2D
+var loading_status : int
+var progress : Array[float]
 
+var target_scene_path : String
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
-	assert(player)
+	var current_scene_file := get_tree().current_scene.scene_file_path
+	
+	# TODO horrible, but I'm assuming the level naming convention is temporary anyway
+	var next_level_number := current_scene_file.split('-')[1].to_int() + 1
+	
+	var keys := {
+		"level": 1,
+		"screen": next_level_number,
+		}
+	target_scene_path = FILE_FORMAT.format(keys)
+
+	# Request to load the target scene:
+	ResourceLoader.load_threaded_request(target_scene_path)
 
 func _on_body_entered(body):
-	if body == player:
-		end_reached.emit()
-		print('hit')
+		if body.is_in_group("Player"):
+			get_tree().change_scene_to_file(target_scene_path)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(_delta: float) -> void:
+	## Update the status:
+	#loading_status = ResourceLoader.load_threaded_get_status(target_scene_path, progress)
+	#
+	## Check the loading status:
+	#match loading_status:
+		##ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+			##progress_bar.value = progress[0] * 100 # Change the ProgressBar value
+		#ResourceLoader.THREAD_LOAD_LOADED:
+			## When done loading, change to the target scene:
+			#get_tree().change_scene_to_packed(ResourceLoader.load_threaded_get(target_scene_path))
+		#ResourceLoader.THREAD_LOAD_FAILED:
+			## Well some error happend:
+			#print("Error. Could not load Resource")

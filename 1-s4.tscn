@@ -172,10 +172,9 @@ layer_3/tile_data = PackedInt32Array(40, 1769472, 15, 65576, 1769472, 15, 131112
 position = Vector2(649, 160)
 jump_speed = -800.0
 
-[node name="ExitPoint" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_btg1h")]
+[node name="ExitPoint" parent="." instance=ExtResource("4_btg1h")]
 position = Vector2(0, 31)
 scale = Vector2(1, 20.96)
-player = NodePath("../Player")
 
 [node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_n38sj")]
 position = Vector2(649, 161)

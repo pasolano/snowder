@@ -31,10 +31,9 @@ layer_3/tile_data = PackedInt32Array(1769512, 1769472, 14, 1835048, 1769472, 14,
 [node name="Player" parent="." instance=ExtResource("3_y6dg5")]
 position = Vector2(17, 369)
 
-[node name="ExitPoint" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_c8b0a")]
+[node name="ExitPoint" parent="." instance=ExtResource("4_c8b0a")]
 position = Vector2(720, -1)
 scale = Vector2(1, 45.76)
-player = NodePath("../Player")
 
 [node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_seuna")]
 position = Vector2(17, 369)
