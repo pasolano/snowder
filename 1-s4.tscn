@@ -176,9 +176,8 @@ jump_speed = -800.0
 position = Vector2(0, 31)
 scale = Vector2(1, 20.96)
 
-[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_n38sj")]
+[node name="SpawnPoint" parent="." instance=ExtResource("5_n38sj")]
 position = Vector2(649, 161)
-spawnee = NodePath("../Player")
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_mqhhx")

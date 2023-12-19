@@ -34,9 +34,8 @@ position = Vector2(677, 224)
 position = Vector2(0, 96)
 scale = Vector2(1, 31.36)
 
-[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_luesg")]
+[node name="SpawnPoint" parent="." instance=ExtResource("5_luesg")]
 position = Vector2(702, 223)
-spawnee = NodePath("../Player")
 
 [node name="Fall_gap" parent="." instance=ExtResource("6_nmw0g")]
 script = null

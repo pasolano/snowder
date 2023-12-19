@@ -29,10 +29,8 @@ texture = ExtResource("2_qkqq6")
 
 [node name="Player" parent="." instance=ExtResource("3_c5t3p")]
 
-[node name="PlayerSpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("4_0yx1o")]
+[node name="PlayerSpawnPoint" parent="." instance=ExtResource("4_0yx1o")]
 position = Vector2(11, 363)
-spawnee = NodePath("../Player")
-walk_to = Vector2(100, 0)
 
 [node name="ExitPoint" parent="." instance=ExtResource("5_7v6ev")]
 position = Vector2(719, -1)
