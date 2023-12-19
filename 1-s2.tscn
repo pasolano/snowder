@@ -36,9 +36,8 @@ layer_3/tile_data = PackedInt32Array()
 position = Vector2(719, -28)
 scale = Vector2(1, 42.28)
 
-[node name="SpawnPoint" parent="." node_paths=PackedStringArray("spawnee") instance=ExtResource("5_5y1c6")]
+[node name="SpawnPoint" parent="." instance=ExtResource("5_5y1c6")]
 position = Vector2(11, 33)
-spawnee = NodePath("../Player")
 
 [node name="Fall_gap" parent="." instance=ExtResource("6_osspg")]
 position = Vector2(10, -76)
