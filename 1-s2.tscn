@@ -42,5 +42,6 @@ spawnee = NodePath("../Player")
 
 [node name="Fall_gap" parent="." instance=ExtResource("6_osspg")]
 position = Vector2(10, -76)
+script = null
 
 [connection signal="body_shape_entered" from="Fall_gap" to="Player" method="_on_fall_gap_body_shape_entered"]

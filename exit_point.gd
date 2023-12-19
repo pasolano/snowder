@@ -6,6 +6,7 @@ var loading_status : int
 var progress : Array[float]
 
 var target_scene_path : String
+var target_scene_exists: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,11 +22,13 @@ func _ready():
 	target_scene_path = FILE_FORMAT.format(keys)
 
 	# Request to load the target scene:
-	ResourceLoader.load_threaded_request(target_scene_path)
+	target_scene_exists = FileAccess.file_exists(target_scene_path)
+	if target_scene_exists:
+		ResourceLoader.load_threaded_request(target_scene_path)
 
 func _on_body_entered(body):
-		if body.is_in_group("Player"):
-			get_tree().change_scene_to_file(target_scene_path)
+		if target_scene_exists and body.is_in_group("Player"):
+			get_tree().call_deferred("change_scene_to_file", target_scene_path)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(_delta: float) -> void:

@@ -100,7 +100,7 @@ func _process(_delta):
 		_animated_sprite.play('idle')
 
 #placeholder for death by falling/spikes
-func _on_fall_gap_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+func _on_fall_gap_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
 	controllable = false
 	velocity.y = 0
 	velocity.x = 0
