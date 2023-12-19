@@ -120,4 +120,3 @@ func _on_cutscene(argument:String):
 		controllable = false
 	if argument == "yes_control":
 		controllable = true
-

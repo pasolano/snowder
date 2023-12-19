@@ -1,0 +1,16 @@
+[signal arg="no_control"]
+bro: Okay I'm gonna just flip you over to the ground.
+- No wait I'll fall!
+	jump i_fall
+- Ok, let's do it.
+label i_fall
+bro: Nah I doubt it.
+bro: I'm not falling, why should you?
+jump hold_on
+label ok
+bro: That's the spirit!
+bro: Time for some adventures in bending physics.
+label hold_on
+bro: Now hold on tight!
+[signal arg="forced_float"]
+[signal arg="yes_control"]

@@ -1,5 +1,5 @@
 bro: Wait wait wait hold that thought.
 bro: I wanna try something.
-# This is where we would trigger the first transition to top-down.
+bro: Come over here, and I think I can help you out.
 [signal arg="yes_control"]
 [end_timeline]
