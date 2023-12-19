@@ -195,7 +195,7 @@ script = ExtResource("6_8vr8n")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D/bro"]
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_koy3g")
-animation = &"idle_down"
+animation = &"idle_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/bro"]
 shape = SubResource("RectangleShape2D_t8ml4")

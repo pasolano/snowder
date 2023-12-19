@@ -23,8 +23,6 @@ func _physics_process(delta):
 		_bro.play('side')
 	else:
 		_follow.set_progress_ratio(_end_rat)
-		_bro.play('idle_side')
-	move_and_slide()
 	
 
 func _on_area_2d_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
