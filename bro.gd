@@ -9,6 +9,8 @@ const SPEED := 120.0
 const END_RAT := 0.99 # tbh this is just a stupid stopgap because the pathing function wasn't working
 
 func _physics_process(delta):
+	if PlayerVars.died_in_s4 < 2:
+		return
 	if follow.get_progress_ratio() < END_RAT:
 		follow.set_progress(follow.get_progress() + SPEED * delta)
 		bro.play("side")
