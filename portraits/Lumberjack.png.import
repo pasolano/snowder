@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn712knjslnrg"
-path="res://.godot/imported/old_man.png-a4f72f36ae45e1f908efc46157190364.ctex"
+uid="uid://wm28x40f011p"
+path="res://.godot/imported/Lumberjack.png-a9cf905c93d1933c4ea66d2ae36f72e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://portraits/old_man.png"
-dest_files=["res://.godot/imported/old_man.png-a4f72f36ae45e1f908efc46157190364.ctex"]
+source_file="res://portraits/Lumberjack.png"
+dest_files=["res://.godot/imported/Lumberjack.png-a9cf905c93d1933c4ea66d2ae36f72e0.ctex"]
 
 [params]
 

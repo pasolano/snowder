@@ -26,154 +26,147 @@
 "offset": Vector2(0, 0),
 "portraits": {
 "Boy": {
-"export_overrides": {
-"image": "\"\""
-},
-"image": "res://PortraitsFinal/Boy.png",
+"image": "res://portraits/Boy.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Boy2": {
-"export_overrides": {
-"image": "\"\""
-},
-"ignore_char_scale": false,
-"image": "res://PortraitsFinal/Boy2.png",
+"image": "res://portraits/Boy2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
-"scale": 1.0,
+"scale": 1,
 "scene": ""
 },
 "Detective": {
-"image": "res://PortraitsFinal/Detective.png",
+"image": "res://portraits/Detective.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "FarmerBoy": {
-"image": "res://PortraitsFinal/FarmerBoy.png",
+"image": "res://portraits/FarmerBoy.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "FinalCombo": {
-"image": "res://PortraitsFinal/FinalCombo.png",
+"image": "res://portraits/FinalCombo.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Girl": {
-"image": "res://PortraitsFinal/Girl.png",
+"image": "res://portraits/Girl.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Girl2": {
-"image": "res://PortraitsFinal/Girl2.png",
+"image": "res://portraits/Girl2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Glasses": {
-"image": "res://PortraitsFinal/Glasses.png",
+"image": "res://portraits/Glasses.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Goblin": {
-"image": "res://PortraitsFinal/Goblin.png",
+"image": "res://portraits/Goblin.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Kid1": {
-"image": "res://PortraitsFinal/Kid1.png",
+"image": "res://portraits/Kid1.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Kid2": {
-"image": "res://PortraitsFinal/Kid2.png",
+"image": "res://portraits/Kid2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Knight": {
-"image": "res://PortraitsFinal/Knight.png",
+"image": "res://portraits/Knight.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Lady": {
-"image": "res://PortraitsFinal/Lady.png",
+"image": "res://portraits/Lady.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Lady2": {
-"image": "res://PortraitsFinal/Lady2.png",
+"image": "res://portraits/Lady2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
-"Luimberjack": {
-"image": "res://PortraitsFinal/Luimberjack.png",
+"Lumberjack": {
+"image": "res://portraits/Luimberjack.png",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"OldMan": {
+"image": "res://portraits/old_man.png",
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"OldMan2": {
+"image": "res://portraits/old_man2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Punk": {
-"image": "res://PortraitsFinal/Punk.png",
+"image": "res://portraits/Punk.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Viking": {
-"image": "res://PortraitsFinal/Viking.png",
+"image": "res://portraits/Viking.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Wizard1": {
-"image": "res://PortraitsFinal/Wizard1.png",
+"image": "res://portraits/Wizard1.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "Wizard2": {
-"image": "res://PortraitsFinal/Wizard2.png",
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"old_man": {
-"image": "res://PortraitsFinal/old_man.png",
-"mirror": false,
-"offset": Vector2(0, 0),
-"scale": 1,
-"scene": ""
-},
-"old_man2": {
-"image": "res://PortraitsFinal/old_man2.png",
+"image": "res://portraits/Wizard2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
