@@ -69,6 +69,13 @@ func start(pos):
 @onready var _animated_sprite = $AnimatedSprite2D
 
 func _process(_delta):
+		#skip dialogue
+	if Input.is_action_just_pressed('d_skip'):
+		Dialogic.end_timeline()
+		controllable = true
+		#fast-forward dialogue
+	if Input.is_action_just_pressed('d_ff'):
+		Dialogic.Input.auto_skip.enabled = true
 	if controllable == false:
 		return
 	if Input.is_action_pressed("move_right"):
@@ -99,6 +106,8 @@ func _process(_delta):
 	if velocity == Vector2.ZERO and motion_mode == MOTION_MODE_GROUNDED:
 		_animated_sprite.play('idle')
 
+
+
 #placeholder for death by falling/spikes
 func _on_fall_gap_body_shape_entered(_body_rid, _body, _body_shape_index, _local_shape_index):
 	controllable = false
@@ -120,3 +129,5 @@ func _on_cutscene(argument:String):
 		controllable = false
 	if argument == "yes_control":
 		controllable = true
+
+
