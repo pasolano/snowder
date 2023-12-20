@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://b7xp53smbrrr6" path="res://png/Dead (28).png" id="28_snuwx"]
 [ext_resource type="Texture2D" uid="uid://fytxxgqhmtq7" path="res://png/Dead (29).png" id="29_13o1i"]
 [ext_resource type="Texture2D" uid="uid://d375qcorxpstg" path="res://png/Dead (30).png" id="30_vglmx"]
-[ext_resource type="Texture2D" uid="uid://78rl772g7fbu" path="res://Characters_V3_Colour (1).png" id="31_jephp"]
+[ext_resource type="Texture2D" uid="uid://78rl772g7fbu" path="res://sprite_sheet.png" id="31_jephp"]
 [ext_resource type="Texture2D" uid="uid://1yblwms8pdec" path="res://png/Idle (1).png" id="31_lmho8"]
 [ext_resource type="Texture2D" uid="uid://bx25m7pqistpq" path="res://png/Idle (2).png" id="32_eikia"]
 [ext_resource type="Texture2D" uid="uid://dkt3b27ermli4" path="res://png/Idle (3).png" id="33_2w35s"]

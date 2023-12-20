@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Snowder"
-run/main_scene="res://1-s1.tscn"
+run/main_scene="res://levels/1-s1.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Other/DialogicGameHandler.gd"
-PlayerVars="*res://player_vars.gd"
+PlayerVars="*res://PlayerVars.gd"
 
 [dialogic]
 
