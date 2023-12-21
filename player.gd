@@ -76,6 +76,8 @@ func _process(_delta):
 		#fast-forward dialogue
 	if Input.is_action_just_pressed('d_ff'):
 		Dialogic.Input.auto_skip.enabled = true
+		
+	#animate
 	if controllable == false:
 		return
 	if Input.is_action_pressed("move_right"):
