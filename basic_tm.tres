@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://durewpmp8m5vq"]
 
-[ext_resource type="Texture2D" uid="uid://ch8y8uae46wje" path="res://Retro Platformer Cave Tileset.png" id="1_25is7"]
+[ext_resource type="Texture2D" uid="uid://ch8y8uae46wje" path="res://cave_tileset.png" id="1_25is7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7q8c"]
 texture = ExtResource("1_25is7")

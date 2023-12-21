@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b13hk4o0uc2pm"]
+
+[ext_resource type="Script" path="res://ExitPoint.gd" id="1_a02l5"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l6225"]
+
+[node name="ExitPoint" type="Area2D"]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_a02l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_l6225")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
