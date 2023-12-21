@@ -124,21 +124,21 @@
 "scene": ""
 },
 "Lumberjack": {
-"image": "res://portraits/Luimberjack.png",
+"image": "res://portraits/Lumberjack.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "OldMan": {
-"image": "res://portraits/old_man.png",
+"image": "res://portraits/OldMan.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""
 },
 "OldMan2": {
-"image": "res://portraits/old_man2.png",
+"image": "res://portraits/OldMan2.png",
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
