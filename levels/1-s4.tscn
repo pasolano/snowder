@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d4ni6yeqwoeec"]
+[gd_scene load_steps=24 format=3 uid="uid://d4ni6yeqwoeec"]
 
 [ext_resource type="Script" path="res://levels/1-s4.gd" id="1_2t5uq"]
 [ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://cave_background.png" id="2_0u2ai"]
@@ -132,20 +132,6 @@ func _process(_delta):
 a = Vector2(-1.28699, -81.0144)
 b = Vector2(2.12854, 99.0226)
 
-[sub_resource type="GDScript" id="GDScript_pyjad"]
-script/source = "extends CollisionShape2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
-
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_2t5uq")
 
@@ -207,7 +193,6 @@ script = SubResource("GDScript_p1v66")
 position = Vector2(352, 286)
 rotation = -1.5796
 shape = SubResource("SegmentShape2D_d2gkt")
-script = SubResource("GDScript_pyjad")
 
 [node name="Fall_gap" parent="." instance=ExtResource("9_nm8da")]
 script = null
