@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dech47k21qqdb"]
 
-[ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="1_hjofs"]
+[ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://cave_background.png" id="1_xbgyg"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_5bw6x"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://Player.tscn" id="3_j68my"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://ExitPoint.tscn" id="4_vno0y"]
@@ -13,7 +13,7 @@
 offset_top = 2.0
 offset_right = 719.0
 offset_bottom = 479.0
-texture = ExtResource("1_hjofs")
+texture = ExtResource("1_xbgyg")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(-719, 2)

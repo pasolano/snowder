@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://d4ni6yeqwoeec"]
 
 [ext_resource type="Script" path="res://levels/1-s4.gd" id="1_2t5uq"]
-[ext_resource type="Texture2D" uid="uid://c0x3va7e01so2" path="res://blue_back.tres" id="2_6jixf"]
+[ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://cave_background.png" id="2_0u2ai"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="3_kd7n6"]
 [ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://Player.tscn" id="4_7kof2"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://ExitPoint.tscn" id="5_n8t1e"]
@@ -152,7 +152,7 @@ script = ExtResource("1_2t5uq")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 718.0
 offset_bottom = 480.0
-texture = ExtResource("2_6jixf")
+texture = ExtResource("2_0u2ai")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("3_kd7n6")
