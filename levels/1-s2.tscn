@@ -41,6 +41,7 @@ position = Vector2(11, 33)
 
 [node name="Fall_gap" parent="." instance=ExtResource("6_l5ueq")]
 position = Vector2(10, -76)
+scale = Vector2(1, 1.03372)
 script = null
 
 [connection signal="body_shape_entered" from="Fall_gap" to="Player" method="_on_fall_gap_body_shape_entered"]

@@ -14,9 +14,8 @@ func _process(_delta):
 	pass
 "
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_xrsjv"]
-a = Vector2(377, 9)
-b = Vector2(-354, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vng5i"]
+size = Vector2(819, 31)
 
 [node name="Fall_gap" type="Area2D"]
 collision_layer = 8
@@ -24,5 +23,5 @@ collision_mask = 2
 script = SubResource("GDScript_417u0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(348, 511)
-shape = SubResource("SegmentShape2D_xrsjv")
+position = Vector2(349.5, 516.5)
+shape = SubResource("RectangleShape2D_vng5i")

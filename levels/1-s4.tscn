@@ -195,6 +195,7 @@ rotation = -1.5796
 shape = SubResource("SegmentShape2D_d2gkt")
 
 [node name="Fall_gap" parent="." instance=ExtResource("9_nm8da")]
+position = Vector2(12, -9)
 script = null
 
 [connection signal="animation_finished" from="Player/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
