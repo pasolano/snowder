@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bb2wcjf6vip6a" path="res://cave_background.png" id="1_xbgyg"]
 [ext_resource type="TileSet" uid="uid://durewpmp8m5vq" path="res://basic_tm.tres" id="2_5bw6x"]
-[ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://Player.tscn" id="3_j68my"]
+[ext_resource type="PackedScene" uid="uid://dqpqadpvwjpdk" path="res://player.tscn" id="3_j68my"]
 [ext_resource type="PackedScene" uid="uid://b13hk4o0uc2pm" path="res://ExitPoint.tscn" id="4_vno0y"]
 [ext_resource type="PackedScene" uid="uid://djeoetnfqmkl0" path="res://SpawnPoint.tscn" id="5_5lk0d"]
 [ext_resource type="PackedScene" uid="uid://c2sf8dhh6ud4g" path="res://FallGap.tscn" id="6_l5ueq"]

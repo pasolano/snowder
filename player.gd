@@ -67,6 +67,7 @@ func start(pos):
 	$CollisionShape2D.disabled = false
 
 @onready var _animated_sprite = $AnimatedSprite2D
+var _facing = ''
 
 func _process(_delta):
 		#skip dialogue
@@ -81,6 +82,7 @@ func _process(_delta):
 	if controllable == false:
 		return
 	if Input.is_action_pressed("move_right"):
+		_facing = 'right' #to preserve direction while jumping
 		if motion_mode == MOTION_MODE_FLOATING:
 			_animated_sprite.play('floating_side')
 			_animated_sprite.flip_h = false
@@ -88,6 +90,7 @@ func _process(_delta):
 			_animated_sprite.play('run')
 			_animated_sprite.flip_h = false
 	if Input.is_action_pressed("move_left"):
+		_facing = 'left'
 		if motion_mode == MOTION_MODE_FLOATING:
 			_animated_sprite.play('floating_side')
 			_animated_sprite.flip_h = true
@@ -101,9 +104,11 @@ func _process(_delta):
 		if motion_mode == MOTION_MODE_FLOATING:
 			_animated_sprite.play('floating_up')
 		else:
-			_animated_sprite.play('jump')
-			_animated_sprite.flip_h = false
-			if velocity.x < 0:
+			if _facing == 'right':
+				_animated_sprite.play('jump')
+				_animated_sprite.flip_h = false
+			if _facing == 'left':
+				_animated_sprite.play('jump')
 				_animated_sprite.flip_h = true
 	if velocity == Vector2.ZERO and motion_mode == MOTION_MODE_GROUNDED:
 		_animated_sprite.play('idle')
