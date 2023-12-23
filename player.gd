@@ -122,6 +122,12 @@ func _on_fall_gap_body_shape_entered(_body_rid, _body, _body_shape_index, _local
 	velocity.x = 0
 	_animated_sprite.play('dead')
 
+func _on_fall_gap_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	controllable = false
+	velocity.y = 0
+	velocity.x = 0
+	_animated_sprite.play('dead') # stop-gap for soft-lock
+
 func _on_animated_sprite_2d_animation_finished():
 	get_tree().reload_current_scene()
 
@@ -136,5 +142,3 @@ func _on_cutscene(argument:String):
 		controllable = false
 	if argument == "yes_control":
 		controllable = true
-
-
